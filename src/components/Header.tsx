@@ -2,15 +2,16 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="flex flex-row justify-center p-4">
+    <div className="flex flex-row flex-wrap justify-center p-4 bg-info">
       <a href=".">
         <img
-          className="h-32 w-auto hover:drop-shadow-[0_0_15px_rgba(255,252,127,0.8)]"
+          className="h-32 w-auto transition duration-500 ease-in-out transform hover:drop-shadow-[0_0_15px_rgba(227,210,141,0.9)] "
           src="/src/img/test_bg1.png"
           alt="MHPCC Logo"
         />
       </a>
-      <ul className="flex justify-center items-center ml-10 gap-10">
+      <ul className="flex flex-wrap justify-center items-center ml-10 gap-10">
+        <a href="/about">About Us</a>
         <a href="/whats_new">News & Events</a>
         <a href="/hardware">Hardware</a>
         <a href="/software">Software</a>
