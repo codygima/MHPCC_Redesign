@@ -1,4 +1,6 @@
 import React from "react";
+import AFRL-logo from './AFRL-logo.jpg'
+import ARL_logo from './'
 
 export default function Footer() {
     return (
