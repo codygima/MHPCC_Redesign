@@ -10,6 +10,8 @@ export default {
         prllx1: "url('src/img/mhpcc_building.jpg')",
         prllx2: "url('src/img/MHPCC_aerial.jpg')",
         prllx3: "url('src/img/building.jpg')",
+        prllx4: "url(src/img/computer_guy.avif)",
+        prllx5: "url(src/img/tech1.jpeg)",
       },
       screens: {
         md: "800px",
