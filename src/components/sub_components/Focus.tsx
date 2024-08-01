@@ -3,7 +3,7 @@ import React from "react";
 export default function Focus() {
   return (
     <>
-      <div className="rounded-box h-auto w-1/2 p-4 m-4 bg-[#eeeeef]">
+      <div className="rounded-box w-auto py-8 px-12 m-8 bg-base-100">
         <h2 className="text-2xl text-primary mt-2">Areas of Focus</h2>
         <li className="text-black text-xl m-1">
           Emerging Technology - Reduce risk and improve performance by

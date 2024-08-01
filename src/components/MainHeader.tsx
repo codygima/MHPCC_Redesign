@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header className="flex flex-row flex-wrap justify-center p-4 rounded-btn sticky top-0 z-10">
+    <header className="flex flex-row flex-wrap justify-center mt-[-10rem] p-4 bg-neutral bg-opacity-50 sticky top-0 z-10">
       <a href=".">
         <img
           className="h-32 w-auto transition duration-500 ease-in-out transform hover:drop-shadow-[0_0_15px_rgba(227,210,141,0.9)] "
