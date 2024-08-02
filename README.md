@@ -1,54 +1,33 @@
-# Astro Starter Kit: Basics
+# MHPCC Website Redesign
 
-```sh
-npm create astro@latest -- --template basics
+## Overview
+The Maui High Performance Computing Center is part of the DoD Supercomputing Resource Center and has an outdated website. Being a part of the security and tech industry, it would be assumed that the website representing the company would be more fleshed out. The website is outdated in the sense that the experience lacks a feel of modernness. Josh Mori, Jovi Terawaki, and Cody Gima contributed to the website redesign. The redesign utilized [Astro](https://astro.build/), [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/docs/use/) to create the website. Although not yet finished or deployed, you can follow the instructions below to host a developmental page on your local computer.
+
+## Prerequisites
++ [Node.js](https://nodejs.org/en)
+
+## Installation and Usage
+To install this MHPCC Website Redesign, make sure you installed all the prerequisites to your computer, then open your local terminal and follow these steps:
+
+1. Clone the Repository:
+```bash
+git clone https://github.com/codygima/MHPCC_Redesign.git
+```
+2. Navigate to the Project Directory:
+```bash
+cd MHPCC_Redesign
+```
+3. Install Dependencies:
+```bash
+npm install
+```
+4. Run the Program:
+```bash
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+5. Copy the Local URL:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+In the terminal, there should be a URL that you can use to host the website using your local browser. The URL should look something like, `http://localhost:4321/`.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+In doing all of this, you will be able to run the redesigned MHPCC website! Looking through the code you can see what we did to update the website to give it a modern feel and experience!
