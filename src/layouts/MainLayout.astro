@@ -1,6 +1,6 @@
 ---
 import MainHeader from '../components/MainHeader';
-// import Footer from '../components/Footer.tsx;'
+import Footer from '../components/Footer';
 interface Props {
 	title: string;
 }
@@ -25,11 +25,25 @@ const { title } = Astro.props;
 		<MainHeader />
 		<slot />
 	</body>
+	<footer>
+		<div class="footer">
+			<Footer />
+		</div>
+	</footer>
 </html>
 <style>
 	html {
 		font-family: "Ubuntu", sans-serif;
-		/* background: rgb(154,154,159);
-		background: radial-gradient(circle, rgba(154,154,159,1) 25%, rgba(66,66,66,1) 100%); */
+	}
+	.footer{
+		padding-top:50px;
+		border-top: 3px dotted #bbb;
+		position: sticky;
+ 	 	left: 0;
+   		bottom: 0;
+ 		width: 100%;
+   		background-color: "#f3f4f6";
+   		color: white;
+   		text-align: left;
 	}
 </style>
