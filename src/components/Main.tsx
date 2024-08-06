@@ -17,17 +17,17 @@ export default function Main() {
           DoD's High Performance Computing Modernization Program (HPCMP).
         </p>
       </div>
-      <div className="rounded-btn px-5 py-10">
+      <div className="flex flex-col lg:rounded-btn lg:px-5 lg:py-10">
         <div className="flex justify-end">
-          <div className="flex items-center justify-center m-4 h-96 w-1/2 rounded-box bg-prllx3 bg-cover"></div>
+          <div className="flex items-center justify-evenly m-4 h-96 rounded-box lg:w-1/2 lg:bg-prllx3 lg:bg-cover"></div>
           <VCHPC />
         </div>
         <div className="flex justify-start">
           <Mission />
-          <div className="flex items-center justify-evenly m-4 h-96 w-1/2 rounded-box bg-prllx5 bg-cover"></div>
+          <div className="flex items-center justify-evenly m-4 h-96  rounded-box lg:w-1/2 lg:bg-prllx5 lg:bg-cover"></div>
         </div>
         <div className="flex justify-end">
-          <div className="flex items-center justify-evenly m-4 h-96 w-1/2 rounded-box bg-prllx4 bg-cover"></div>
+          <div className="flex items-center justify-evenly m-4 h-96 rounded-box lg:w-1/2 lg:bg-prllx4 lg:bg-cover"></div>
           <Vision />
         </div>
         <Focus />

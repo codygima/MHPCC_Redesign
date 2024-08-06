@@ -16,12 +16,12 @@ export default function MainHeader() {
   const linkClasses =
     "transition duration-700 ease-in-out text-secondary transform font-thin hover:scale-125 text-lg hover:text-base-100";
   const baseNavClass =
-    "flex flex-row flex-wrap justify-between w-full p-4 fixed top-0 z-10 transition duration-500 ease-in-out transform xl:gap-8";
+    "flex flex-row flex-wrap items-center justify-between w-full p-4 fixed top-0 z-10 transition duration-500 ease-in-out transform xl:gap-8";
 
   // Logic for Navigation Bar animation
   const [nav, setNavbar] = useState(false);
   const changeBG = () => {
-    if (window.scrollY >= 128) {
+    if (window.scrollY >= 530) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -34,7 +34,9 @@ export default function MainHeader() {
     <>
       <nav
         className={`${baseNavClass} ${
-          nav ? "bg-info bg-opacity-90 " : "bg-transparent"
+          nav
+            ? "bg-info bg-opacity-90 scale-100"
+            : "xl:bg-transparent xl:scale-90 bg-info bg-opacity-90"
         }`}
       >
         <div className="flex min-h-[inherit] items-center">
@@ -74,11 +76,11 @@ export default function MainHeader() {
         </label>
         <ul
           id="nav-items"
-          className="xl:w-fit w-full xl:[&>li]:w-fit [&>li]:w-full hidden xl:flex flex-wrap items-center gap-3 pb-4 xl:pb-0 [&>li]:p-2 peer-has-[:checked]:flex text-center"
+          className="xl:w-fit w-full xl:*:w-fit *:w-full hidden xl:flex flex-wrap items-center gap-3 pb-4 xl:pb-0 *:p-2 peer-has-[:checked]:flex text-center"
         >
           {links.map((link) => (
             <li className={linkClasses}>
-              <a key={link.href} className={linkClasses} href={link.href}>
+              <a key={link.href} href={link.href}>
                 {link.label}
               </a>
             </li>
