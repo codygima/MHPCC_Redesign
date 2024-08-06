@@ -24,26 +24,11 @@ const { title } = Astro.props;
 	<body>
 		<MainHeader client:only/>
 		<slot />
+		<Footer />
 	</body>
-	<footer>
-		<div class="footer">
-			<Footer />
-		</div>
-	</footer>
 </html>
 <style>
 	html {
 		font-family: "Ubuntu", sans-serif;
-	}
-	.footer{
-		padding-top:50px;
-		border-top: 3px dotted #bbb;
-		position: sticky;
- 	 	left: 0;
-   		bottom: 0;
- 		width: 100%;
-   		background-color: "#f3f4f6";
-   		color: white;
-   		text-align: left;
 	}
 </style>
