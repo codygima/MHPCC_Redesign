@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <>
       <div className="flex flex-col rounded-btn m-4">
-        <p className="rounded-box bg-base-100 font-black text-center text-secondary text-2xl p-24">
+        <p className="rounded-box font-black text-center text-secondary p-24 text-lg bg-accent lg:text-2xl lg:bg-base-100">
           The MHPCC DSRC, established in 1993, is an Air Force research
           Laboratory (AFRL) Center managed by the University of Hawaii under
           contract to the Air Force Research Laboratory's Directed Energy
@@ -18,16 +18,16 @@ export default function Main() {
         </p>
       </div>
       <div className="flex flex-col lg:rounded-btn lg:px-5 lg:py-10">
-        <div className="flex justify-end">
-          <div className="flex items-center justify-evenly m-4 h-96 rounded-box lg:w-1/2 lg:bg-prllx3 lg:bg-cover"></div>
+        <div className="lg:flex lg:justify-end">
+          <div className="rounded-box lg:m-4 lg:h-96 lg:w-1/2 lg:bg-prllx3 lg:bg-cover"></div>
           <VCHPC />
         </div>
-        <div className="flex justify-start">
+        <div className="lg:flex lg:justify-start">
           <Mission />
-          <div className="flex items-center justify-evenly m-4 h-96  rounded-box lg:w-1/2 lg:bg-prllx5 lg:bg-cover"></div>
+          <div className="rounded-box lg:m-4 lg:h-96 lg:w-1/2 lg:bg-prllx5 lg:bg-cover"></div>
         </div>
-        <div className="flex justify-end">
-          <div className="flex items-center justify-evenly m-4 h-96 rounded-box lg:w-1/2 lg:bg-prllx4 lg:bg-cover"></div>
+        <div className="lg:flex lg:justify-end">
+          <div className="rounded-box lg:m-4 lg:h-96 lg:w-1/2 lg:bg-prllx4 lg:bg-cover"></div>
           <Vision />
         </div>
         <Focus />
