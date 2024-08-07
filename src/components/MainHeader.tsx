@@ -1,22 +1,62 @@
 import React, { useState } from "react";
 
+function getLabel([]) {}
+
 export default function MainHeader() {
   // Array of links to path directory
   const links = [
-    { href: "/about", label: "About Us" },
-    { href: "/whats_new", label: "News & Events" },
+    {
+      href: "/about",
+      label: "About Us",
+      subLinks: [
+        { href: ".", label: "Business Hours" },
+        { href: ".", label: "Contact" },
+        { href: ".", label: "Visitors" },
+      ],
+    },
+    {
+      href: "/whats_new",
+      label: "News & Events",
+      subLinks: [{ href: ".", label: "Publications" }],
+    },
     { href: "/hardware", label: "Hardware" },
-    { href: "/software", label: "Software" },
-    { href: "/user", label: "User Services" },
+    {
+      href: "/software",
+      label: "Software",
+      subLinks: [{ href: ".", label: "Software Request" }],
+    },
+    {
+      href: "/user",
+      label: "User Services",
+      subLinks: [
+        { href: ".", label: "System News" },
+        { href: ".", label: "Accounts" },
+        { href: ".", label: "Software Request" },
+        { href: ".", label: "Program Services & Resources" },
+        { href: ".", label: "HPC Portal" },
+      ],
+    },
     { href: "/doc", label: "Documentation" },
     { href: "/links", label: "Quick Links" },
   ];
 
-  // The styling we want for different elements using Tailwind CSS
+  // Arrays and for-loops for navigating through indices of 'links'
+  let navIndex = [];
+  let otherIndex = [];
+  for (let i = 0; i < links.length; i++) {
+    if (i == 0 || i == 1 || i == 3 || i == 4) {
+      navIndex.push(i);
+    } else {
+      otherIndex.push(i);
+    }
+  }
+
+  // The styling we want for the links using Tailwind CSS
   const linkClasses =
-    "transition duration-700 ease-in-out text-secondary transform font-thin hover:scale-125 text-lg hover:text-base-100";
+    "transition duration-700 ease-in-out text-secondary text-lg transform font-thin hover:text-base-100";
+  // The styling we want for the enitre navigation bar
   const baseNavClass =
-    "flex flex-row flex-wrap items-center justify-between w-full p-4 fixed top-0 z-10 transition duration-500 ease-in-out transform xl:gap-8";
+    "flex flex-row flex-wrap items-center justify-between w-full p-4 gap-8 fixed top-0 z-10 transition duration-500 ease-in-out transform xl:gap-10";
 
   // Logic for Navigation Bar animation
   const [nav, setNavbar] = useState(false);
@@ -36,7 +76,7 @@ export default function MainHeader() {
         className={`${baseNavClass} ${
           nav
             ? "bg-info bg-opacity-90 scale-100"
-            : "xl:bg-transparent xl:scale-90 bg-info bg-opacity-90"
+            : "desktop:bg-transparent desktop:scale-90 bg-info bg-opacity-90"
         }`}
       >
         <div className="flex min-h-[inherit] items-center">
@@ -48,7 +88,7 @@ export default function MainHeader() {
             />
           </a>
         </div>
-        <label className="btn btn-ghost swap swap-rotate text-lg peer xl:hidden px-2">
+        <label className="btn btn-ghost swap swap-rotate text-lg peer desktop:hidden px-2">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" />
 
@@ -76,13 +116,32 @@ export default function MainHeader() {
         </label>
         <ul
           id="nav-items"
-          className="xl:w-fit w-full xl:*:w-fit *:w-full hidden xl:flex flex-wrap items-center gap-3 pb-4 xl:pb-0 *:p-2 peer-has-[:checked]:flex text-center"
+          className="desktop:w-fit w-full desktop:*:w-fit *:w-full hidden desktop:flex flex-wrap items-center gap-3 pb-4 desktop:pb-0 *:p-2 peer-has-[:checked]:flex text-center menu-horizontal [&>li:not(.menu-title)>details>ul]:static desktop:[&>li:not(.menu-title)>details>ul]:fixed"
         >
-          {links.map((link) => (
-            <li className={linkClasses}>
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
+          {navIndex.map((index) => (
+            <li
+              key={links[index].href}
+              className={`${linkClasses} ${"menu menu-disabled hover:cursor-pointer"}`}
+            >
+              <details>
+                <summary>{links[index].label}</summary>
+                <ul className="bg-accent text-md static xl:fixed">
+                  {links[index].subLinks?.map((subLink) => (
+                    <li
+                      key={subLink.label}
+                      className="text-neutral hover:text-base-100 hover:transition hover:duration-300 hover:ease-in-out"
+                    >
+                      <a href={subLink.href}>{subLink.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          ))}
+
+          {otherIndex.map((index) => (
+            <li key={links[index].href} className={linkClasses}>
+              <a href={links[index].href}>{links[index].label}</a>
             </li>
           ))}
         </ul>
