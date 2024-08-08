@@ -1,7 +1,9 @@
 # MHPCC Website Redesign
 
 ## Overview
-The Maui High Performance Computing Center is part of the DoD Supercomputing Resource Center and has an outdated website. Being a part of the security and tech industry, it would be assumed that the website representing the company would be more fleshed out. The website is outdated in the sense that the experience lacks a feel of modernness. Josh Mori, Jovi Terawaki, and Cody Gima contributed to the website redesign. The redesign utilized [Astro](https://astro.build/), [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/docs/use/) to create the website. Although not yet finished or deployed, you can follow the instructions below to host a developmental page on your local computer.
+The Maui High Performance Computing Center is part of the DoD Supercomputing Resource Center and has an outdated website. Being a part of the security and tech industry, it would be assumed that the website representing the company would be more fleshed out. The website is outdated in the sense that the experience lacks a feel of modernness. Josh Mori, Jovi Terawaki, and Cody Gima contributed to the website redesign. The redesign utilized [Astro](https://astro.build/), [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/docs/use/) to create the website. You can follow the instructions below to host a developmental page on your local computer.
+
+### **You can visit the website at: [https://mhpcc-redesign.vercel.app/](https://mhpcc-redesign.vercel.app/)**
 
 ## Prerequisites
 + [Node.js](https://nodejs.org/en)
