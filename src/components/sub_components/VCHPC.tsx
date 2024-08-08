@@ -5,7 +5,7 @@ export default function VCHPC() {
     <>
       <div className="rounded-box w-auto h-auto py-8 px-12 m-8 overflow-scroll bg-base-100 flex justify-center items-center lg:h-96 lg:w-1/2 lg:m-4">
         <div className="flex flex-col">
-          <h2 className="text-2xl text-primary m-2 font-medium">
+          <h2 className="text-2xl text-[#93823B] m-2 font-medium">
             Vanguard Center for High Performance Computing
           </h2>
           <p className="text-secondary text-xl font-light">

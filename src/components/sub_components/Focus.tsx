@@ -4,7 +4,7 @@ export default function Focus() {
   return (
     <>
       <div className="rounded-box w-auto py-8 px-12 m-8 bg-accent lg:bg-base-100">
-        <h2 className="text-2xl text-primary font-medium mt-2">
+        <h2 className="text-2xl text-primary lg:text-[#93823B] font-medium mt-2">
           Areas of Focus
         </h2>
         <li className="text-secondary text-xl font-light m-1">

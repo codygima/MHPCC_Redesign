@@ -129,7 +129,7 @@ export default function MainHeader() {
                   {links[index].subLinks?.map((subLink) => (
                     <li
                       key={subLink.label}
-                      className="text-neutral hover:text-base-100 hover:transition hover:duration-300 hover:ease-in-out"
+                      className="hover:text-primary text-base-100 hover:transition hover:duration-300 hover:ease-in-out"
                     >
                       <a href={subLink.href}>{subLink.label}</a>
                     </li>

@@ -5,7 +5,7 @@ export default function Links() {
     <>
       <div className="w-1/2">
         <section className="flex flex-col rounded-box h-auto bg-base-100 m-8">
-          <h1 className="flex justify-center text-primary font-bold">
+          <h1 className="flex justify-center text-[#93823B] font-bold">
             Local Resources
           </h1>
           <div className="flex justify-start p-4 text-warning font-thin">
