@@ -61,7 +61,7 @@ export default function MainHeader() {
   // Logic for Navigation Bar animation
   const [nav, setNavbar] = useState(false);
   const changeBG = () => {
-    if (window.scrollY >= 530) {
+    if (window.scrollY >= 90) {
       setNavbar(true);
     } else {
       setNavbar(false);
