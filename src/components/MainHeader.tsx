@@ -121,7 +121,7 @@ export default function MainHeader() {
           {navIndex.map((index) => (
             <li
               key={links[index].href}
-              className={`${linkClasses} ${"menu menu-disabled hover:cursor-pointer"}`}
+              className={`${linkClasses} ${"menu menu-dropdown hover:cursor-pointer"}`}
             >
               <details>
                 <summary>{links[index].label}</summary>

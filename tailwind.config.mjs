@@ -7,11 +7,10 @@ export default {
       colors: { lemon: "#E3D28D", slate_gray: "#2F4F4F" },
       backgroundImage: {
         MHPCC: "url('/img/header_bg.png')",
-        prllx1: "url('src/img/mhpcc_building.jpg')",
-        prllx2: "url('src/img/MHPCC_aerial.jpg')",
-        prllx3: "url('src/img/building.jpg')",
-        prllx4: "url(src/img/computer_guy.avif)",
-        prllx5: "url(src/img/tech1.jpeg)",
+        prllx2: "url('public/img/MHPCC_aerial.jpg')",
+        prllx3: "url('public/img/building.jpg')",
+        prllx4: "url(public/img/computer_guy.avif)",
+        prllx5: "url(public/img/tech1.jpeg)",
       },
       screens: {
         md: "800px",
