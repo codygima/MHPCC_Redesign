@@ -118,15 +118,13 @@ export default function MainHeader() {
           id="nav-items"
           className="desktop:w-fit w-full desktop:*:w-fit *:w-full hidden desktop:flex flex-wrap items-center justify-evenly pb-4 desktop:pb-0 *:p-2 peer-has-[:checked]:flex text-center menu-horizontal [&>li:not(.menu-title)>details>ul]:static desktop:[&>li:not(.menu-title)>details>ul]:fixed"
         >
-          <li
-            className={`${linkClasses} ${"menu menu-dropdown hover:cursor-pointer"}`}
-          >
+          <li className={`${linkClasses} ${"menu hover:cursor-pointer"}`}>
             <a href=".">Home</a>
           </li>
           {navIndex.map((index) => (
             <li
               key={links[index].href}
-              className={`${linkClasses} ${"menu menu-dropdown hover:cursor-pointer"}`}
+              className={`${linkClasses} ${"menu hover:cursor-pointer"}`}
             >
               <details>
                 <summary>{links[index].label}</summary>
@@ -134,7 +132,7 @@ export default function MainHeader() {
                   {links[index].subLinks?.map((subLink) => (
                     <li
                       key={subLink.label}
-                      className="hover:text-primary text-base-100 hover:transition hover:duration-300 hover:ease-in-out"
+                      className="text-base-100 hover:text-primary hover:transition"
                     >
                       <a href={subLink.href}>{subLink.label}</a>
                     </li>

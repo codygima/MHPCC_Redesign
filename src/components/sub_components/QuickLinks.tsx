@@ -25,7 +25,7 @@ export default function Links() {
         </section>
 
         <section className="flex flex-col rounded-box h-auto bg-base-100 m-8">
-          <h1 className="flex justify-center text-primary font-bold">
+          <h1 className="flex justify-center text-[#93823B] font-bold">
             User Guides
           </h1>
           <div className="flex justify-start p-4 text-warning font-thin">
@@ -45,7 +45,7 @@ export default function Links() {
         </section>
 
         <section className="flex flex-col rounded-box h-auto bg-base-100 m-8">
-          <h1 className="flex justify-center text-primary font-bold">
+          <h1 className="flex justify-center text-[#93823B] font-bold">
             Batch Processing
           </h1>
           <div className="flex justify-start flex-row p-4 text-warning font-thin">
