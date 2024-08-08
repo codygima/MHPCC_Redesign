@@ -7,19 +7,13 @@ export default {
       colors: { lemon: "#E3D28D", slate_gray: "#2F4F4F" },
       backgroundImage: {
         MHPCC: "url('/img/header_bg.png')",
-        prllx2: "url('public/img/MHPCC_aerial.jpg')",
-        prllx3: "url('public/img/building.jpg')",
-        prllx4: "url(public/img/computer_guy.avif)",
-        prllx5: "url(public/img/tech1.jpeg)",
+        prllx2: "url('/img/MHPCC_aerial.jpg')",
+        prllx3: "url('/img/building.jpg')",
+        prllx4: "url(/img/computer_guy.avif)",
+        prllx5: "url(/img/tech1.jpeg)",
       },
       screens: {
         md: "800px",
-        tablet: "640px",
-        // => @media (min-width: 640px) { ... }
-
-        laptop: "1024px",
-        // => @media (min-width: 1024px) { ... }
-
         desktop: "1400px",
         // => @media (min-width: 1280px) { ... }
       },

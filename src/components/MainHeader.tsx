@@ -83,7 +83,7 @@ export default function MainHeader() {
           <a href=".">
             <img
               className="h-32 w-auto transition duration-500 ease-in-out transform hover:drop-shadow-[0_0_15px_rgba(227,210,141,0.9)]"
-              src="public/img/test_bg1.png"
+              src="/img/test_bg1.png"
               alt="MHPCC Logo"
             />
           </a>
