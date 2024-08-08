@@ -7,11 +7,13 @@ export default function Footer() {
       className="flex flex-col justify-between items-center desktop:flex-row md:justify-center md:pt-4 pt-8 px-8 pb-4 border-t border-dotted border-t-base-100 md:w-auto w-full"
     >
       <div id="DoD-logo" className="mb-4 md:mb-0 bg-white rounded-box">
-        <img
-          src="img/hpcmp_logo.jpg"
-          alt="DoD Logo"
-          className="w-[256px] h-[60px] m-4"
-        />
+        <a href="https://www.hpc.mil/" target="_blank">
+          <img
+            src="img/hpcmp_logo.jpg"
+            alt="DoD Logo"
+            className="w-[256px] h-[60px] m-4"
+          />
+        </a>
       </div>
       <div
         id="footer-disclaimer"
@@ -38,21 +40,33 @@ export default function Footer() {
         id="other-logo"
         className="flex flex-row items-center p-4 space-x-4 bg-white rounded-box my-4"
       >
-        <img
-          src="img/afrl_logo.jpg"
-          alt="AFRL Logo"
-          className="w-[50px] h-[50px]"
-        />
-        <img
-          src="img/uh_logo.jpg"
-          alt="UH Logo"
-          className="w-[50px] h-[50px] m-2"
-        />
-        <img
-          src="img/arluh_logo.jpg"
-          alt="ARL Logo"
-          className="w-[89px] h-[60px]"
-        />
+        <a
+          href="
+        https://www.afrl.af.mil/"
+          target="_blank"
+        >
+          <img
+            src="img/afrl_logo.jpg"
+            alt="AFRL Logo"
+            className="w-[50px] h-[50px]"
+          />
+        </a>
+
+        <a href=" https://www.hawaii.edu/" target="_blank">
+          <img
+            src="img/uh_logo.jpg"
+            alt="UH Logo"
+            className="w-[50px] h-[50px] m-2"
+          />
+        </a>
+
+        <a href="https://arl.hawaii.edu/" target="_blank">
+          <img
+            src="img/arluh_logo.jpg"
+            alt="ARL Logo"
+            className="w-[89px] h-[60px]"
+          />
+        </a>
       </div>
     </footer>
   );
