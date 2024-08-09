@@ -30,7 +30,9 @@ const { title } = Astro.props;
 		<div transition:animate={slide({ duration: '1s' })} class="mt-40">
 			<slot />
 		</div>
-		<Footer />
+		<div transition:animate={fade({ duration: '1s' })}>
+			<Footer />
+		</div>
 	</body>
 </html>
 <style>

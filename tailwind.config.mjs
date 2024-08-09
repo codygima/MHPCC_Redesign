@@ -4,7 +4,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      colors: { lemon: "#E3D28D", slate_gray: "#2F4F4F" },
+      colors: {
+        lemon: "#E3D28D",
+        slate_gray: "#2F4F4F",
+        "primary-dark": "#93823B",
+      },
       backgroundImage: {
         MHPCC: "url('/img/header_bg.png')",
         prllx2: "url('/img/MHPCC_aerial.jpg')",

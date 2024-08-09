@@ -9,7 +9,7 @@ export default function MainHeader() {
       href: "/about",
       label: "About Us",
       subLinks: [
-        { href: ".", label: "Business Hours" },
+        { href: "/business", label: "Business Hours" },
         { href: ".", label: "Contact" },
         { href: ".", label: "Visitors" },
       ],
@@ -17,18 +17,25 @@ export default function MainHeader() {
     {
       href: "/whats_new",
       label: "News & Events",
-      subLinks: [{ href: ".", label: "Publications" }],
+      subLinks: [
+        { href: "/whats_new", label: "What's New" },
+        { href: ".", label: "Publications" },
+      ],
     },
     { href: "/hardware", label: "Hardware" },
     {
       href: "/software",
       label: "Software",
-      subLinks: [{ href: ".", label: "Software Request" }],
+      subLinks: [
+        { href: "/software", label: "High Performance Software" },
+        { href: ".", label: "Software Request" },
+      ],
     },
     {
       href: "/user",
       label: "User Services",
       subLinks: [
+        { href: "/user", label: "Services" },
         { href: ".", label: "System News" },
         { href: ".", label: "Accounts" },
         { href: ".", label: "Software Request" },
