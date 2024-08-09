@@ -28,7 +28,7 @@ export default function Business() {
       >
         <section
           id="info-section"
-          className="flex flex-col items-center tablet:flex tablet:justify-center mx-4 tablet:w-1/2 tablet:mx-8"
+          className="flex flex-col items-center tablet:flex tablet:justify-center mx-4 tablet:w-1/2"
         >
           <div className={divClass}>
             <h2 className={headerClass}>Normal Business Hours</h2>
@@ -77,9 +77,9 @@ export default function Business() {
         ></div>
         <section
           id="table-section"
-          className="mx-0 flex items-center justify-center tablet:flex tablet:mx-4 tablet:items-center w-full tablet:w-1/2"
+          className="mx-0  flex items-center tablet:flex tablet:mx-4 tablet:items-center w-full tablet:w-1/2"
         >
-          <div className="overflow-x-auto flex bg-base-100 rounded-box justify-center">
+          <div className="overflow-x-auto flex w-full bg-base-100 rounded-box justify-center">
             <table className="table table-zebra">
               <thead>
                 <tr className="text-primary-dark text-xl font-bold">

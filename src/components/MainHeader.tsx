@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-function getLabel([]) {}
-
 export default function MainHeader() {
   // Array of links to path directory
   const links = [
+    { href: ".", label: "Home" },
     {
       href: "/about",
       label: "About Us",
@@ -47,23 +46,12 @@ export default function MainHeader() {
     { href: "/links", label: "Quick Links" },
   ];
 
-  // Arrays and for-loops for navigating through indices of 'links'
-  let navIndex = [];
-  let otherIndex = [];
-  for (let i = 0; i < links.length; i++) {
-    if (i == 0 || i == 1 || i == 3 || i == 4) {
-      navIndex.push(i);
-    } else {
-      otherIndex.push(i);
-    }
-  }
-
   // The styling we want for the links using Tailwind CSS
   const linkClasses =
-    "transition duration-700 ease-in-out text-secondary text-lg transform font-thin hover:text-base-100";
+    "transition duration-700 ease-in-out text-secondary text-[17px]  transform font-thin hover:text-base-100";
   // The styling we want for the enitre navigation bar
   const baseNavClass =
-    "flex flex-row flex-wrap items-center justify-between w-full p-4 gap-8 fixed top-0 z-10 transition duration-500 ease-in-out transform xl:gap-10";
+    "flex flex-row flex-wrap items-center w-full p-4 fixed top-0 z-10 transition duration-500 ease-in-out transform";
 
   // Logic for Navigation Bar animation
   const [nav, setNavbar] = useState(false);
@@ -77,8 +65,8 @@ export default function MainHeader() {
   window.addEventListener("scroll", changeBG);
 
   return (
-    // The line of code below is to have the same styling code without having to copy/paste it just to have "bg-neutral/transparent" added
     <>
+      {/* The line of code below is to have the same styling code without having to copy/paste it just to have "bg-neutral/transparent" added */}
       <nav
         className={`${baseNavClass} ${
           nav
@@ -95,7 +83,7 @@ export default function MainHeader() {
             />
           </a>
         </div>
-        <label className="btn btn-ghost swap swap-rotate text-lg peer desktop:hidden px-2">
+        <label className="btn btn-ghost swap swap-rotate ml-auto text-lg peer desktop:hidden px-2">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" />
 
@@ -123,35 +111,31 @@ export default function MainHeader() {
         </label>
         <ul
           id="nav-items"
-          className="desktop:w-fit w-full desktop:*:w-fit *:w-full hidden desktop:flex flex-wrap items-center justify-evenly pb-4 desktop:pb-0 *:p-2 peer-has-[:checked]:flex text-center menu-horizontal [&>li:not(.menu-title)>details>ul]:static desktop:[&>li:not(.menu-title)>details>ul]:fixed"
+          className="desktop:w-fit w-full desktop:*:w-fit *:w-full hidden desktop:flex flex-wrap items-center ml-auto gap-2 pb-4 desktop:pb-0 *:p-1 peer-has-[:checked]:flex text-center menu-horizontal [&>li:not(.menu-title)>details>ul]:static desktop:[&>li:not(.menu-title)>details>ul]:fixed"
         >
-          <li className={`${linkClasses} ${"menu hover:cursor-pointer"}`}>
-            <a href=".">Home</a>
-          </li>
-          {navIndex.map((index) => (
+          {/* Maps through the links array and lists it in order based on the array's index */}
+          {links.map((link, index) => (
             <li
-              key={links[index].href}
-              className={`${linkClasses} ${"menu hover:cursor-pointer"}`}
+              key={link.href}
+              className={`${linkClasses} menu hover:cursor-pointer`}
             >
-              <details>
-                <summary>{links[index].label}</summary>
-                <ul className="bg-accent text-md static xl:fixed">
-                  {links[index].subLinks?.map((subLink) => (
-                    <li
-                      key={subLink.label}
-                      className="text-base-100 hover:text-primary hover:transition"
-                    >
-                      <a href={subLink.href}>{subLink.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </details>
-            </li>
-          ))}
-
-          {otherIndex.map((index) => (
-            <li key={links[index].href} className={linkClasses}>
-              <a href={links[index].href}>{links[index].label}</a>
+              {link.subLinks ? (
+                <details>
+                  <summary>{link.label}</summary>
+                  <ul className="bg-accent text-md static xl:fixed">
+                    {link.subLinks.map((subLink) => (
+                      <li
+                        key={subLink.label}
+                        className="text-base-100 hover:text-primary hover:transition"
+                      >
+                        <a href={subLink.href}>{subLink.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <a href={link.href}>{link.label}</a>
+              )}
             </li>
           ))}
         </ul>
