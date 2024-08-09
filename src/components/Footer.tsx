@@ -9,7 +9,7 @@ export default function Footer() {
       <div id="DoD-logo" className="mb-4 md:mb-0 bg-white rounded-box">
         <a href="https://www.hpc.mil/" target="_blank">
           <img
-            src="/public/img/hpcmp_logo.jpg"
+            src="img/hpcmp_logo.jpg"
             alt="DoD Logo"
             className="w-[256px] h-[60px] m-4"
           />
@@ -46,7 +46,7 @@ export default function Footer() {
           target="_blank"
         >
           <img
-            src="public/img/afrl_logo.jpg"
+            src="img/afrl_logo.jpg"
             alt="AFRL Logo"
             className="w-[50px] h-[50px]"
           />
@@ -54,7 +54,7 @@ export default function Footer() {
 
         <a href=" https://www.hawaii.edu/" target="_blank">
           <img
-            src="public/img/uh_logo.jpg"
+            src="img/uh_logo.jpg"
             alt="UH Logo"
             className="w-[50px] h-[50px] m-2"
           />
@@ -62,7 +62,7 @@ export default function Footer() {
 
         <a href="https://arl.hawaii.edu/" target="_blank">
           <img
-            src="public/img/arluh_logo.jpg"
+            src="img/arluh_logo.jpg"
             alt="ARL Logo"
             className="w-[89px] h-[60px]"
           />
