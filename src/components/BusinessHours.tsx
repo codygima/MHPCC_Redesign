@@ -33,8 +33,8 @@ export default function Business() {
           <div className={divClass}>
             <h2 className={headerClass}>Normal Business Hours</h2>
             <p className={paraClass}>
-              08:00 - 17:00 HST (GMT -10 hours), Monday - Friday, excluding
-              holidays.
+              <span className="font-bold">08:00 - 17:00 </span>
+              HST (GMT -10 hours), Monday - Friday, excluding holidays.
             </p>
           </div>
           <div className={divClass}>
@@ -89,7 +89,7 @@ export default function Business() {
               </thead>
               <tbody>
                 {holidays.map((holiday, index) => (
-                  <tr key={index} className="text-secondary">
+                  <tr key={index} className="text-secondary text-md">
                     <td>{holiday.name}</td>
                     <td>{holiday.date}</td>
                   </tr>
