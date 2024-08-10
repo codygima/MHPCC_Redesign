@@ -77,7 +77,7 @@ export default function Business() {
         ></div>
         <section
           id="table-section"
-          className="mx-0  flex items-center tablet:flex tablet:mx-4 tablet:items-center w-full tablet:w-1/2"
+          className="mx-0 flex items-center tablet:flex tablet:mx-4 tablet:items-center w-full tablet:w-1/2"
         >
           <div className="overflow-x-auto flex w-full bg-base-100 rounded-box justify-center">
             <table className="table table-zebra">
@@ -90,7 +90,7 @@ export default function Business() {
               <tbody>
                 {holidays.map((holiday, index) => (
                   <tr key={index} className="text-secondary text-md">
-                    <td>{holiday.name}</td>
+                    <td className="font-bold">{holiday.name}</td>
                     <td>{holiday.date}</td>
                   </tr>
                 ))}
